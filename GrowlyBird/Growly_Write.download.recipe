@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Small but capable word processor</string>
+		<key>Identifier</key>
+		<string>com.github.oliverweinm-recipes.download.GrowlyWrite</string>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>Growly Notes</string>
+			<key>DOWNLOAD_URL</key>
+			<string>http://www.growlybird.com/downloads/write_226.dmg</string>
+			<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
+        	<string>True</string>
+		</dict>
+		<key>MinimumVersion</key>
+		<string>1.0.0</string>
+		<key>Process</key>
+		<array>
+			<!-- URLDownloader -->
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>filename</key>
+					<string>%NAME%.dmg</string>
+					<key>url</key>
+					<string>%DOWNLOAD_URL%</string>
+				</dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+			</dict>
+			<!-- CodeSignatureVerifier
+			    Deactivated, as CodeSignatureVerifier fails for an unknown reason -->
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>requirement</key>
+					<array>
+						<string>anchor apple generic and identifier "com.growlybird.write" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = M58SCVXVJ9)</string>
+					</array>
+					<key>input_path</key>
+					<string>%pathname%/%NAME%.app</string>
+				</dict>
+				<key>Processor</key>
+				<string>CodeSignatureVerifier</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
