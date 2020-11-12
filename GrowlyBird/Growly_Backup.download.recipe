@@ -3,15 +3,15 @@
 <plist version="1.0">
 	<dict>
 		<key>Description</key>
-		<string>Small but capable word processor</string>
+		<string>App for performing on-demand backups of your critical files</string>
 		<key>Identifier</key>
-		<string>com.github.oliverweinm-recipes.download.GrowlyWrite</string>
+		<string>com.github.oliverweinm-recipes.download.GrowlyBackup</string>
 		<key>Input</key>
 		<dict>
 			<key>NAME</key>
-			<string>Growly Write</string>
+			<string>Growly Backup</string>
 			<key>DOWNLOAD_URL</key>
-			<string>http://www.growlybird.com/downloads/write_226.dmg</string>
+			<string>http://www.growlybird.com/downloads/backup_121.dmg</string>
 			<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
         	<string>True</string>
 		</dict>
@@ -38,7 +38,7 @@
 				<dict>
 					<key>requirement</key>
 					<array>
-						<string>anchor apple generic and identifier "com.growlybird.write" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = M58SCVXVJ9)</string>
+						<string>anchor apple generic and identifier "com.growlybird.backup" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = M58SCVXVJ9)</string>
 					</array>
 					<key>input_path</key>
 					<string>%pathname%/%NAME%.app</string>
