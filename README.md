@@ -8,3 +8,5 @@ Just a repo for some recipes that don't exist yet. The recipes for the following
   - GOG Galaxy 2.0 (.download)
 - PhoenicisOrg
   - PlayOnMac (.download)
+- [Splasm Software](https://www.splasm.com/products/)
+  - Audiobook Builder (.download)
