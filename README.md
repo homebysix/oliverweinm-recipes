@@ -8,3 +8,8 @@ Just a repo for some recipes that don't exist yet. The recipes for the following
   - GOG Galaxy 2.0 (.download)
 - PhoenicisOrg
   - PlayOnMac (.download)
+- [Splasm Software](https://www.splasm.com/products/)
+  - Audiobook Builder (.download)
+
+I don't use munki outside of work, but if you're in need of a a munki recipe, just request it.\
+Some of these recipes might use a static download link. No worries, I intend to add, wherever applicable, a python processor that looks for the most up to date download URL.
