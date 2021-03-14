@@ -10,21 +10,32 @@
 		<dict>
 			<key>NAME</key>
 			<string>PlayOnMac</string>
-			<key>DOWNLOAD_URL</key>
-			<string>http://repository.playonmac.com/PlayOnMac/PlayOnMac_4.4.1.dmg</string>
 		</dict>
 		<key>MinimumVersion</key>
 		<string>1.0.0</string>
 		<key>Process</key>
 		<array>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>re_pattern</key>
+					<string>href="https://repository\.playonmac\.com/PlayOnMac/PlayOnMac_([\d\.]+)\.dmg"</string>
+					<key>result_output_var_name</key>
+					<string>version</string>
+					<key>url</key>
+					<string>https://www.playonmac.com/en/download.html</string>
+				</dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+			</dict>
 			<!-- URLDownloader -->
 			<dict>
 				<key>Arguments</key>
 				<dict>
 					<key>filename</key>
-					<string>%NAME%.dmg</string>
+					<string>%NAME%-%version%.dmg</string>
 					<key>url</key>
-					<string>%DOWNLOAD_URL%</string>
+					<string>http://repository.playonmac.com/PlayOnMac/PlayOnMac_%version%.dmg</string>
 				</dict>
 				<key>Processor</key>
 				<string>URLDownloader</string>
