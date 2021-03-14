@@ -12,8 +12,6 @@
 			<string>YACReader</string>
 			<key>DOWNLOAD_URL</key>
 			<string>https://github.com/YACReader/yacreader/releases/download/9.7.1/YACReader-9.7.1.2009123.MacOSX-Intel.dmg</string>
-			<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
-        	<string>True</string>
 		</dict>
 		<key>MinimumVersion</key>
 		<string>1.0.0</string>
@@ -35,15 +33,11 @@
 				<key>Processor</key>
 				<string>EndOfCheckPhase</string>
 			</dict>
-			<!-- CodeSignatureVerifier
-			    Deactivated, as CodeSignatureVerifier fails for an unknown reason -->
 			<dict>
 				<key>Arguments</key>
 				<dict>
 					<key>requirement</key>
-					<array>
-						<string>identifier "com.yacreader.YACReader" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "9B6KKVW3WM"</string>
-					</array>
+					<string>identifier "com.yacreader.YACReader" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "9B6KKVW3WM"</string>
 					<key>input_path</key>
 					<string>%pathname%/YACReader.app</string>
 				</dict>
