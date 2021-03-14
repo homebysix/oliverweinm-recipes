@@ -19,14 +19,26 @@
 		<string>1.0.0</string>
 		<key>Process</key>
 		<array>
-			<!-- URLDownloader -->
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>re_pattern</key>
+					<string>href="(backup_[\d]+\.dmg)"</string>
+					<key>result_output_var_name</key>
+					<string>filepath</string>
+					<key>url</key>
+					<string>https://www.growlybird.com/downloads/</string>
+				</dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+			</dict>
 			<dict>
 				<key>Arguments</key>
 				<dict>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 					<key>url</key>
-					<string>%DOWNLOAD_URL%</string>
+					<string>https://www.growlybird.com/downloads/%filepath%</string>
 				</dict>
 				<key>Processor</key>
 				<string>URLDownloader</string>
