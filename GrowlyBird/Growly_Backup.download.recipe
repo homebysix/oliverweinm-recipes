@@ -10,8 +10,12 @@
 		<dict>
 			<key>NAME</key>
 			<string>Growly Backup</string>
-			<key>DOWNLOAD_URL</key>
-			<string>http://www.growlybird.com/downloads/backup_121.dmg</string>
+			<!-- <key>DOWNLOAD_URL</key>
+			<string>http://www.growlybird.com/downloads/backup_121.dmg</string>-->
+			<key>SEARCH_PATTERN</key>
+			<string>href="(https:\/\/www\.growlybird\.com\/downloads\/backup_\d\d\d\.dmg)"</string>
+			<key>SEARCH_URL</key>
+			<string>https://www.growlybird.com/backup</string>
 			<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
         	<string>True</string>
 		</dict>
@@ -19,6 +23,18 @@
 		<string>1.0.0</string>
 		<key>Process</key>
 		<array>
+			<!-- URLTextSearcher -->
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>re_pattern</key>
+					<string>%SEARCH_PATTERN%</string>
+					<key>url</key>
+					<string>%SEARCH_URL%</string>
+				</dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+			</dict>
 			<!-- URLDownloader -->
 			<dict>
 				<key>Arguments</key>
@@ -26,7 +42,7 @@
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 					<key>url</key>
-					<string>%DOWNLOAD_URL%</string>
+					<string>%match%</string>
 				</dict>
 				<key>Processor</key>
 				<string>URLDownloader</string>
