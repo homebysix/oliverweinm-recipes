@@ -12,8 +12,6 @@
 			<string>GOG Galaxy</string>
 			<key>DOWNLOAD_URL</key>
 			<string>http://content-system.gog.com/open_link/download?path=/open/galaxy/client/galaxy_client_2.0.23.3.pkg</string>
-			<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
-        	<string>True</string>
 		</dict>
 		<key>MinimumVersion</key>
 		<string>1.0.0</string>
@@ -35,17 +33,17 @@
 				<key>Processor</key>
 				<string>EndOfCheckPhase</string>
 			</dict>
-			<!-- CodeSignatureVerifier
-			    Deactivated, as CodeSignatureVerifier fails for an unknown reason -->
 			<dict>
 				<key>Arguments</key>
 				<dict>
-					<key>requirement</key>
+					<key>expected_authority_names</key>
 					<array>
-						<string>identifier "com.gog.galaxy" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "9WS36Q8886"</string>
+						<string>Developer ID Installer: GOG Sp. z o.o. (9WS36Q8886)</string>
+						<string>Developer ID Certification Authority</string>
+						<string>Apple Root CA</string>
 					</array>
 					<key>input_path</key>
-					<string>%pathname%/%NAME%.app</string>
+					<string>%pathname%</string>
 				</dict>
 				<key>Processor</key>
 				<string>CodeSignatureVerifier</string>
