@@ -3,7 +3,7 @@
 <plist version="1.0">
 	<dict>
 		<key>Description</key>
-		<string>Small but capable word processor</string>
+		<string>Minimal Desktop App for Medium developed by Medium enthusiasts</string>
 		<key>Identifier</key>
 		<string>com.github.oliverweinm-recipes.download.Desk-for-Medium</string>
 		<key>Input</key>
