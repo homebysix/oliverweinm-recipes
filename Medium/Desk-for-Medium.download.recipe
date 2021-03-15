@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Small but capable word processor</string>
+		<key>Identifier</key>
+		<string>com.github.oliverweinm-recipes.download.Desk-for-Medium</string>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>Desk for Medium</string>
+		</dict>
+		<key>MinimumVersion</key>
+		<string>1.0.0</string>
+		<key>Process</key>
+		<array>
+			<!-- URLText Searcher -->
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>re_pattern</key>
+					<string>(\d\.\d\.\d)\.dmg</string>
+					<key>result_output_var_name</key>
+					<string>filepath</string>
+					<key>url</key>
+					<string>https://medium.com/desktop-app/download-9b9c3227f21</string>
+				</dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+			</dict>
+			<!-- URLDownloader 
+		https://github.com/cloveapps/deskapp-releases/releases/download/v1.3.0/Desk-for-Medium-1.3.0.dmg-->
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>filename</key>
+					<string>%NAME%.dmg</string>
+					<key>url</key>
+					<string>https://github.com/cloveapps/deskapp-releases/releases/download/v%filepath%/Desk-for-Medium-%filepath%.dmg</string>
+				</dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>requirement</key>
+					<string>anchor apple generic and identifier "co.thedesk.TheDeskApp" and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "897MXA578H"</string>
+					<key>input_path</key>
+					<string>%pathname%/Desk for Medium.app</string>
+				</dict>
+				<key>Processor</key>
+				<string>CodeSignatureVerifier</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
