@@ -12,8 +12,6 @@
 			<string>MongoDB Realm Studio</string>
 			<key>DOWNLOAD_URL</key>
 			<string>https://studio-releases.realm.io/latest/download/mac-dmg</string>
-			<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
-        	<string>True</string>
 		</dict>
 		<key>MinimumVersion</key>
 		<string>1.0.0</string>
@@ -31,17 +29,17 @@
 				<key>Processor</key>
 				<string>URLDownloader</string>
 			</dict>
-			<!-- CodeSignatureVerifier
-			    Deactivated, as CodeSignatureVerifier fails for an unknown reason -->
+			<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+			</dict>
 			<dict>
 				<key>Arguments</key>
 				<dict>
 					<key>requirement</key>
-					<array>
-						<string>identifier "com.mongodb.realm-studio" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = QX5CR2FTN2</string>
-					</array>
+					<string>identifier "com.mongodb.realm-studio" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = QX5CR2FTN2</string>
 					<key>input_path</key>
-					<string>%pathname%/%NAME%.app</string>
+					<string>%pathname%/MongoDB Realm Studio.app</string>
 				</dict>
 				<key>Processor</key>
 				<string>CodeSignatureVerifier</string>
