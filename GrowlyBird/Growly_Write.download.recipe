@@ -15,6 +15,7 @@
 		<string>1.0.0</string>
 		<key>Process</key>
 		<array>
+			<!-- URLText Searcher -->
 			<dict>
 				<key>Arguments</key>
 				<dict>
@@ -24,10 +25,14 @@
 					<string>filepath</string>
 					<key>url</key>
 					<string>https://www.growlybird.com/downloads/</string>
+					<string>%SEARCH_PATTERN%</string>
+					<key>url</key>
+					<string>%SEARCH_URL%</string>
 				</dict>
 				<key>Processor</key>
 				<string>URLTextSearcher</string>
 			</dict>
+			<!-- URLDownloader -->
 			<dict>
 				<key>Arguments</key>
 				<dict>
