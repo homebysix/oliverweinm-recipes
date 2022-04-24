@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest version of DoNotDisturb by Objective-See.</string>
+    <key>Identifier</key>
+    <string>com.github.oliverweinm-recipes.download.DoNotDisturb</string>
+    <key>MinimumVersion</key>
+    <string>0.6.0</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Do Not Disturb</string>
+        <key>GITHUB_REPO</key>
+        <string>objective-see/DoNotDisturb</string>
+        <key>INCLUDE_PRERELEASES</key>
+        <string>False</string>
+    </dict>
+    <key>Process</key>
+    <array>
+        <dict>
+          <key>Processor</key>
+          <string>GitHubReleasesInfoProvider</string>
+            <key>Arguments</key>
+            <dict>
+              <key>include_prereleases</key>
+              <string>%INCLUDE_PRERELEASES%</string>
+              <key>github_repo</key>
+              <string>%GITHUB_REPO%</string>
+              <key>asset_regex</key>
+              <string>DoNotDisturb_[\d+?]{1,}.|_[\d+?]{1,}.|_[\d+?]{1,}.zip</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>
