@@ -12,6 +12,7 @@ Just a repo for some recipes that don't exist yet. The recipes for the following
   - Realm Studio (.download)
 - [Objective See](https://objective-see.com/products.html)
   - Do Not Disturb (.download, .pkg)
+  - OverSight (.download, .pkg)
   - RansomWhere? (.download, .pkg)
   - ReiKey (.pkg)
   - TaskExplorer (.download, .pkg)
