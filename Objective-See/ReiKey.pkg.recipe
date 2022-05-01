@@ -14,7 +14,7 @@
         <string>ReiKey</string>
     </dict>
     <key>ParentRecipe</key>
-    <string>com.github.oliverweinm-recipes.download.ReiKey</string>
+    <string>com.github.peshay.download.ReiKey</string>
     <key>Process</key>
     <array>
         <dict>
