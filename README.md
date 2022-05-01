@@ -12,6 +12,9 @@ Just a repo for some recipes that don't exist yet. The recipes for the following
   - Realm Studio (.download)
 - [Objective See](https://objective-see.com/products.html)
   - Do Not Disturb (.download, .pkg)
+  - RansomWhere? (.download, .pkg)
+  - ReiKey (.pkg)
+  - TaskExplorer (.download, .pkg)
 - PhoenicisOrg
   - PlayOnMac (.download)
 - [Splasm Software](https://www.splasm.com/products/)
