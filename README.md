@@ -15,7 +15,7 @@ Just a repo for some recipes that don't exist yet. The recipes for the following
   - OverSight (.download, .pkg)
   - RansomWhere? (.download, .pkg)
   - ReiKey (.pkg)
-  - TaskExplorer (.download, .pkg)
+  - TaskExplorer (.munki)
 - PhoenicisOrg
   - PlayOnMac (.download)
 - [Splasm Software](https://www.splasm.com/products/)
