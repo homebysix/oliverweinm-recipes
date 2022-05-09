@@ -13,7 +13,7 @@ Just a repo for some recipes that don't exist yet. The recipes for the following
 - [Objective See](https://objective-see.com/products.html)
   - Do Not Disturb (.download, .pkg, .munki)
   - OverSight (.download, .pkg)
-  - RansomWhere? (.download, .pkg)
+  - RansomWhere? (.download, .pkg, .munki)
   - ReiKey (.pkg)
   - TaskExplorer (.munki)
 - PhoenicisOrg
