@@ -10,7 +10,7 @@ Just a repo for some recipes that don't exist yet. The recipes for the following
   - Growly Backup (.download)
 - [MongoDB Realm](https://www.mongodb.com/realm)
   - Realm Studio (.download)
-- [Objective See](https://objective-see.com/products.html)
+- [Objective See](https://objective-see.com/products.html) The recipes were migrated to [its-unibas-recipes](https://github.com/autopkg/its-unibas-recipes)
   - Do Not Disturb (.download, .pkg, .munki)
   - OverSight (.download, .pkg, .munki)
   - RansomWhere? (.download, .pkg, .munki)
