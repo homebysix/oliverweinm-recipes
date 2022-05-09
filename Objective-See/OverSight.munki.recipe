@@ -42,14 +42,17 @@
             <string>%MUNKI_DEVELOPER%</string>
             <key>postinstall_script</key>
             <string>#!/bin/sh
-sudo /Applications/%NAME% Installer.app/Contents/MacOS/Oversight Installer -install
-rm -rf /Applications/%NAME% Installer.app/
+sudo "/Applications/%NAME% Installer.app/Contents/MacOS/Oversight Installer" -install
+rm -rf "/Applications/%NAME% Installer.app/"
 exit 0
             </string>
             <key>preuninstall_script</key>
             <string>#!/bin/sh
 //close application if open
 pkill OverSight
+
+//remove log file and other Application Support Data
+rm -rf "~/Library/Application Support/Objective-See/OverSight"
 
 //remove application
 rm -rf /Applications/%NAME%.app
