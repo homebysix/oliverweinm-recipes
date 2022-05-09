@@ -12,7 +12,7 @@ Just a repo for some recipes that don't exist yet. The recipes for the following
   - Realm Studio (.download)
 - [Objective See](https://objective-see.com/products.html)
   - Do Not Disturb (.download, .pkg, .munki)
-  - OverSight (.download, .pkg)
+  - OverSight (.download, .pkg, .munki)
   - RansomWhere? (.download, .pkg, .munki)
   - ReiKey (.pkg)
   - TaskExplorer (.munki)
